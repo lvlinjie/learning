@@ -25,6 +25,6 @@ public class FeignApp {
 
     @GetMapping("/test")
     public String test(){
-        return "test";
+        return "test11";
     }
 }
