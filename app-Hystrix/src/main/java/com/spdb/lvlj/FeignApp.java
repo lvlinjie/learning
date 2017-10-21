@@ -28,5 +28,6 @@ public class FeignApp {
     @GetMapping("/test")
     public String test(){
         return "test11111321321";
+        return "test11111321321132132132";
     }
 }
