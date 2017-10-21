@@ -1,0 +1,29 @@
+server:
+  port: 8761 #注册中心端口
+eureka:
+  instance:
+    hostname: localhost #注册中心主机地址
+  client:
+    #不让自己给自己注册
+    registerWithEureka: false
+    fetchRegistry: false
+    #不让自己给自己注册
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      #注册中心暴露出来的地址，外面的服务，需要这个地址到注册中心注册
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    data-username: root
+    data-password: root
+    url: jdbc:mysql://localhost:3306/test
+security:
+  basic:
+    enabled: true
+  user:
+    name: root
+    password: root
